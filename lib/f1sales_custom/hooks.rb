@@ -4,8 +4,8 @@ module F1SalesCustom
   module Hooks
     class Error < StandardError; end
     class Lead
-      def self.before_create(payload)
-        payload
+      def self.switch_source(lead)
+        lead.source.name
       end
     end
   end
